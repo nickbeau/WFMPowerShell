@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfCustomFieldDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomFieldDefinition" nillable="true" type="tns:CustomFieldDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomFieldDefinition" nillable="true" type="tns:ArrayOfCustomFieldDefinition" />
+  <xs:complexType name="CustomFieldDefinition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LinkUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Options" nillable="true" type="tns:ArrayOfOption" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OptionsValues" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UseClient" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseContact" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseLead" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseSupplier" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValueElement" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomFieldDefinition" nillable="true" type="tns:CustomFieldDefinition" />
+  <xs:complexType name="WFMBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameUnformatted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberRecordsRequested" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StartPosition" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFMBase" nillable="true" type="tns:WFMBase" />
+  <xs:complexType name="ArrayOfOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Option" nillable="true" type="tns:Option" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOption" nillable="true" type="tns:ArrayOfOption" />
+  <xs:complexType name="Option">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="AmountIncludingTax" type="xs:double" />
+          <xs:element minOccurs="0" name="AmountTax" type="xs:double" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+          <xs:element minOccurs="0" name="UnitCost" type="xs:double" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Option" nillable="true" type="tns:Option" />
+  <xs:complexType name="ArrayOfCustomField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomField" nillable="true" type="tns:CustomField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomField" nillable="true" type="tns:ArrayOfCustomField" />
+  <xs:complexType name="CustomField">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Boolean" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decimal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number" type="xs:int" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValueElement" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomField" nillable="true" type="tns:CustomField" />
+  <xs:complexType name="WFMResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WFMResponse" nillable="true" type="tns:WFMResponse" />
+</xs:schema>

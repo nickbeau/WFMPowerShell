@@ -1,0 +1,53 @@
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.csprojResolveAssemblyReference.cache
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.KeyForm.resources
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.Properties.Resources.resources
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.csproj.GenerateResource.Cache
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\HubOne.PS.XML
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOne.SharePoint.TemplateMan.app
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOne Templates Slides.pptx
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\iMacros-Setup.exe
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\MPP_TABLE.htm
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\AdministrationConfig-EN.msi
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\AWSToolsAndSDKForNet_sdk-2.0.2.0-ps-2.0.2.2-tk-1.6.0.1.msi
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\MigrationWizPowerShellSetup.msi
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\Xero-BulkVoidApprovedInvoices.zip
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\msoidcli_64.msi
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\AdditionalTools\sharepointonlinemanagementshell_64bit.msi
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOne Deep Dive.pptx
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOne iMacros Scripts.zip
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOne Modern Practice Overview 2.6.pptx
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\HubOneTermsandConditions.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\IntuneChampionsGuide.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\Modern Practice Battlecard.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\Modern Practice DataSheet.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\MPP2.5.chm
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\MPP2.6.chm
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\MPP2013.bdcm
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\MPP_Artifacts.zip
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\SupportTermsAndConditions.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\UsingTheHubOneScannedDocumentManager.pdf
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Scripts\ConnectToOffice365.ps1
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Scripts\DeleteInvoices.ps1
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Documentation\2.6.0.76 - Template Fields List.docx
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Scripts\CopyClientDataToAzure.ps1
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Scripts\TestCopyClientDataToAzure.ps1
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\app.config
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\HubOne.PS.dll.config
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\HubOne.PS.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\HubOne.PS.pdb
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\ChargifyNET.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\HubOne.CommonUtilities.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Microsoft.CSharp.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Microsoft.SharePoint.Client.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Newtonsoft.Json.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\System.Data.DataSetExtensions.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\System.Management.Automation.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\System.Windows.Forms.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\System.Xml.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\System.Xml.Linq.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\XeroApi.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\ChargifyNET.xml
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\bin\Debug\Newtonsoft.Json.xml
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.dll
+C:\s\XPMPSH\HubOne.XPM.PS\HubOne.PS\obj\Debug\HubOne.PS.pdb

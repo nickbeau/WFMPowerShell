@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ContactService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/ContactService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/ContactService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/ContactService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IContact_ClearCacheOfType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfType" />
+  </wsdl:message>
+  <wsdl:message name="IContact_ClearCacheOfType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContact" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetAllContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContacts" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetAllContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetAllContactsPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContactsPaged" />
+  </wsdl:message>
+  <wsdl:message name="IContact_GetAllContactsPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContactsPagedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IContact">
+    <wsdl:operation name="ClearCacheOfType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContact/ClearCacheOfType" message="tns:IContact_ClearCacheOfType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContact/ClearCacheOfTypeResponse" message="tns:IContact_ClearCacheOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContact/GetContact" message="tns:IContact_GetContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContact/GetContactResponse" message="tns:IContact_GetContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContact/GetAllContacts" message="tns:IContact_GetAllContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContact/GetAllContactsResponse" message="tns:IContact_GetAllContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContactsPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContact/GetAllContactsPaged" message="tns:IContact_GetAllContactsPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContact/GetAllContactsPagedResponse" message="tns:IContact_GetAllContactsPaged_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IContact" type="tns:IContact">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClearCacheOfType">
+      <soap:operation soapAction="http://tempuri.org/IContact/ClearCacheOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <soap:operation soapAction="http://tempuri.org/IContact/GetContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContacts">
+      <soap:operation soapAction="http://tempuri.org/IContact/GetAllContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContactsPaged">
+      <soap:operation soapAction="http://tempuri.org/IContact/GetAllContactsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ContactService">
+    <wsdl:port name="BasicHttpBinding_IContact" binding="tns:BasicHttpBinding_IContact">
+      <soap:address location="http://modernpractice2013.cloudapp.net/ContactService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

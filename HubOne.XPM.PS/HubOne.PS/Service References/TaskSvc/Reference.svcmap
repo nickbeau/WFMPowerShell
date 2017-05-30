@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5f0e91b-ce03-4c53-8318-ed85a796e2cf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://modernpractice2013.cloudapp.net/TaskService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TaskService.xsd" MetadataType="Schema" ID="433319e8-20a6-4815-815e-0a62f61bf76c" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/TaskService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TaskService.disco" MetadataType="Disco" ID="7c921470-c0a3-4f1a-a4c8-b71f03e8da93" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/TaskService.svc?disco" />
+    <MetadataFile FileName="TaskService1.xsd" MetadataType="Schema" ID="a9409bc4-8e29-4157-a516-d8ad0a127f87" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/TaskService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TaskService2.xsd" MetadataType="Schema" ID="4a50f9c4-a6df-4d90-8fa5-10034d74c7d2" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/TaskService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TaskService.wsdl" MetadataType="Wsdl" ID="d1e1eaa0-115b-4dd7-a713-6e28932eaed4" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/TaskService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

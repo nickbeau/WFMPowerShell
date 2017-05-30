@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ba8370e-d2ee-48ea-8657-493576f28d2a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://modernpractice2013.cloudapp.net/InvoiceService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InvoiceService.wsdl" MetadataType="Wsdl" ID="45a5df40-810b-4c46-abf4-d6b3cb68313f" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/InvoiceService.svc?wsdl" />
+    <MetadataFile FileName="InvoiceService.xsd" MetadataType="Schema" ID="261aaae1-5509-4520-97b7-aa888c09d283" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InvoiceService1.xsd" MetadataType="Schema" ID="36ff08c1-7571-4a46-b022-b52d480a265d" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InvoiceService2.xsd" MetadataType="Schema" ID="417cfa0a-2c2c-4ebc-8166-cc63a8860d8e" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InvoiceService.disco" MetadataType="Disco" ID="2199da50-949b-4826-86d3-a20b7468ca70" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/InvoiceService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

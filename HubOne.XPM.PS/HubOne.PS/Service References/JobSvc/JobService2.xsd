@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://modernpractice2013.cloudapp.net/JobService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+  <xs:element name="ClearCacheOfType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCacheOfTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetCurrentJobsResult" nillable="true" type="q1:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentJobsPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentJobsPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetCurrentJobsPagedResult" nillable="true" type="q2:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetJobResult" nillable="true" type="q3:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q4:Job" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="UpdateJobStateResult" nillable="true" type="q5:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="detailed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllJobsResult" nillable="true" type="q6:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobsPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobsPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllJobsPagedResult" nillable="true" type="q7:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q8:Job" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AddJobResult" nillable="true" type="q9:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q10:Job" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="UpdateJobResult" nillable="true" type="q11:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q12:Job" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="DeleteJobResult" nillable="true" type="q13:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStaffJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="staffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStaffJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetStaffJobsResult" nillable="true" type="q14:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStaffJobsPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="staffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStaffJobsPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetStaffJobsPagedResult" nillable="true" type="q15:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q16:Job" />
+        <xs:element minOccurs="0" name="staffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="task" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AssignStaffResult" nillable="true" type="q17:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q18:Job" />
+        <xs:element minOccurs="0" name="staffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="task" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="RemoveStaffResult" nillable="true" type="q19:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apiClass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetClientResult" nillable="true" type="q20:Client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetClientJobsResult" nillable="true" type="q21:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientJobsPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientJobsPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetClientJobsPagedResult" nillable="true" type="q22:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobsAndTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="due" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="start" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="complete" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobsAndTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllJobsAndTasksResult" nillable="true" type="q23:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllTasksResult" nillable="true" type="q24:ArrayOfTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="task" nillable="true" type="q25:Task" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AddTaskResult" nillable="true" type="q26:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="task" nillable="true" type="q27:Task" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="UpdateTaskResult" nillable="true" type="q28:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompleteTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="task" nillable="true" type="q29:Task" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompleteTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="CompleteTaskResult" nillable="true" type="q30:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="note" nillable="true" type="q31:Note" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AddNoteResult" nillable="true" type="q32:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetDocumentsResult" nillable="true" type="q33:ArrayOfDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="document" nillable="true" type="q34:Document" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AddDocumentResult" nillable="true" type="q35:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCosts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetCostsResult" nillable="true" type="q36:ArrayOfCost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="cost" nillable="true" type="q37:Cost" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="AddCostResult" nillable="true" type="q38:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="cost" nillable="true" type="q39:Cost" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="UpdateCostResult" nillable="true" type="q40:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="job" nillable="true" type="q41:Job" />
+        <xs:element minOccurs="0" name="templateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="taskMode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="ApplyTemplateResult" nillable="true" type="q42:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="CreateQuoteResult" nillable="true" type="q43:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="CreateEstimateResult" nillable="true" type="q44:WFMResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

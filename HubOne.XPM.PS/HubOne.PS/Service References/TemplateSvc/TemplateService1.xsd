@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://modernpractice2013.cloudapp.net/TemplateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+  <xs:element name="GetAllTemplates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTemplatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllTemplatesResult" nillable="true" type="q1:ArrayOfTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTemplatesPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTemplatesPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllTemplatesPagedResult" nillable="true" type="q2:ArrayOfTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCacheOfType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCacheOfTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

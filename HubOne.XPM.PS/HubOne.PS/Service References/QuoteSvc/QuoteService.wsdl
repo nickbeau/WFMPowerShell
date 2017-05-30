@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QuoteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/QuoteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/QuoteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/QuoteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuote_ClearCacheOfType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfType" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_ClearCacheOfType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetCurrentQuotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentQuotes" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetCurrentQuotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentQuotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetCurrentQuotesPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentQuotesPaged" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetCurrentQuotesPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentQuotesPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuote" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetDraftQuotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftQuotes" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetDraftQuotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftQuotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetAllQuotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotes" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetAllQuotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetAllQuotesPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotesPaged" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_GetAllQuotesPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuotesPagedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuote">
+    <wsdl:operation name="ClearCacheOfType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/ClearCacheOfType" message="tns:IQuote_ClearCacheOfType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/ClearCacheOfTypeResponse" message="tns:IQuote_ClearCacheOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentQuotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetCurrentQuotes" message="tns:IQuote_GetCurrentQuotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetCurrentQuotesResponse" message="tns:IQuote_GetCurrentQuotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentQuotesPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetCurrentQuotesPaged" message="tns:IQuote_GetCurrentQuotesPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetCurrentQuotesPagedResponse" message="tns:IQuote_GetCurrentQuotesPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetQuote" message="tns:IQuote_GetQuote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetQuoteResponse" message="tns:IQuote_GetQuote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftQuotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetDraftQuotes" message="tns:IQuote_GetDraftQuotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetDraftQuotesResponse" message="tns:IQuote_GetDraftQuotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetAllQuotes" message="tns:IQuote_GetAllQuotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetAllQuotesResponse" message="tns:IQuote_GetAllQuotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuotesPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuote/GetAllQuotesPaged" message="tns:IQuote_GetAllQuotesPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuote/GetAllQuotesPagedResponse" message="tns:IQuote_GetAllQuotesPaged_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuote" type="tns:IQuote">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClearCacheOfType">
+      <soap:operation soapAction="http://tempuri.org/IQuote/ClearCacheOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentQuotes">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetCurrentQuotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentQuotesPaged">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetCurrentQuotesPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuote">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftQuotes">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetDraftQuotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuotes">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetAllQuotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuotesPaged">
+      <soap:operation soapAction="http://tempuri.org/IQuote/GetAllQuotesPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuoteService">
+    <wsdl:port name="BasicHttpBinding_IQuote" binding="tns:BasicHttpBinding_IQuote">
+      <soap:address location="http://modernpractice2013.cloudapp.net/QuoteService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

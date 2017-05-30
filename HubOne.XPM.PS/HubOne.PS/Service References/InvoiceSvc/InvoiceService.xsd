@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+  <xs:element name="ClearCacheOfType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCacheOfTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetCurrentInvoicesResult" nillable="true" type="q1:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentInvoicesPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentInvoicesPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetCurrentInvoicesPagedResult" nillable="true" type="q2:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetInvoiceResult" nillable="true" type="q3:Invoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetDraftInvoicesResult" nillable="true" type="q4:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetJobInvoicesResult" nillable="true" type="q5:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="detailed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllInvoicesResult" nillable="true" type="q6:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllInvoicesPaged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="startPosition" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllInvoicesPagedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetAllInvoicesPagedResult" nillable="true" type="q7:ArrayOfInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" minOccurs="0" name="GetPaymentsResult" nillable="true" type="q8:ArrayOfPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

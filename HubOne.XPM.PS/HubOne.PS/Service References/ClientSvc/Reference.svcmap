@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7333eb8d-c4c8-4818-b56f-5e4dc58e58f8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://modernpractice2013.cloudapp.net/ClientService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClientService.xsd" MetadataType="Schema" ID="e00f8387-23f6-4337-8630-c704080d4157" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/ClientService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClientService1.xsd" MetadataType="Schema" ID="eb73ef83-7775-4d65-9bbd-ac3d9211c9a6" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/ClientService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClientService2.xsd" MetadataType="Schema" ID="34f19fb9-b2f3-41f7-b1c6-12fef6304b38" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/ClientService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClientService.wsdl" MetadataType="Wsdl" ID="443a9f07-acc1-4e89-bb23-7d776150c773" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/ClientService.svc?wsdl" />
+    <MetadataFile FileName="ClientService.disco" MetadataType="Disco" ID="779a1807-ecb8-4cef-8724-cb60b7b6d99d" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/ClientService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
