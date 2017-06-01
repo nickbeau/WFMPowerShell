@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Time" nillable="true" type="tns:Time" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTime" nillable="true" type="tns:ArrayOfTime" />
+  <xs:complexType name="Time">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Billable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="End" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Minutes" type="xs:double" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Staff" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Start" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Task" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Time" nillable="true" type="tns:Time" />
+  <xs:complexType name="WFMBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberRecordsRequested" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StartPosition" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFMBase" nillable="true" type="tns:WFMBase" />
+  <xs:complexType name="Timesheet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Billable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="End" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Minutes" type="xs:double" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Staff" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Start" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Task" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Timesheet" nillable="true" type="tns:Timesheet" />
+  <xs:complexType name="WFMResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WFMResponse" nillable="true" type="tns:WFMResponse" />
+</xs:schema>

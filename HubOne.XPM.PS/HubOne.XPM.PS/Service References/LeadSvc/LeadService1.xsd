@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLead">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lead" nillable="true" type="tns:Lead" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLead" nillable="true" type="tns:ArrayOfLead" />
+  <xs:complexType name="Lead">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateWonLost" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dropbox" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstimatedValue" type="xs:double" />
+          <xs:element minOccurs="0" name="OwnerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Lead" nillable="true" type="tns:Lead" />
+  <xs:complexType name="WFMBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameUnformatted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberRecordsRequested" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StartPosition" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFMBase" nillable="true" type="tns:WFMBase" />
+  <xs:complexType name="ArrayOfCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+</xs:schema>

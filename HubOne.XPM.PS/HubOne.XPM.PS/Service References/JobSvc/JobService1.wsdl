@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JobService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/JobService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/JobService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/JobService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJob_ClearCacheOfType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfType" />
+  </wsdl:message>
+  <wsdl:message name="IJob_ClearCacheOfType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCurrentJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCurrentJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCurrentJobsPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentJobsPaged" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCurrentJobsPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentJobsPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJob" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateJobState_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobState" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateJobState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobsPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobsPaged" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobsPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobsPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJob" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJob" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_DeleteJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJob" />
+  </wsdl:message>
+  <wsdl:message name="IJob_DeleteJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetStaffJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetStaffJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetStaffJobsPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffJobsPaged" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetStaffJobsPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffJobsPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AssignStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignStaff" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AssignStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_RemoveStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStaff" />
+  </wsdl:message>
+  <wsdl:message name="IJob_RemoveStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClient" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClientJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClientJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClientJobsPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientJobsPaged" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetClientJobsPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientJobsPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobsAndTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobsAndTasks" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllJobsAndTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobsAndTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTasks" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetAllTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTask" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTask" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CompleteTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTask" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CompleteTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNote" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCosts" />
+  </wsdl:message>
+  <wsdl:message name="IJob_GetCosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddCost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCost" />
+  </wsdl:message>
+  <wsdl:message name="IJob_AddCost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateCost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCost" />
+  </wsdl:message>
+  <wsdl:message name="IJob_UpdateCost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_ApplyTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IJob_ApplyTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CreateQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuote" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CreateQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CreateEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IJob_CreateEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEstimateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJob">
+    <wsdl:operation name="ClearCacheOfType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/ClearCacheOfType" message="tns:IJob_ClearCacheOfType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/ClearCacheOfTypeResponse" message="tns:IJob_ClearCacheOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetCurrentJobs" message="tns:IJob_GetCurrentJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetCurrentJobsResponse" message="tns:IJob_GetCurrentJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentJobsPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetCurrentJobsPaged" message="tns:IJob_GetCurrentJobsPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetCurrentJobsPagedResponse" message="tns:IJob_GetCurrentJobsPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetJob" message="tns:IJob_GetJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetJobResponse" message="tns:IJob_GetJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/UpdateJobState" message="tns:IJob_UpdateJobState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/UpdateJobStateResponse" message="tns:IJob_UpdateJobState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetAllJobs" message="tns:IJob_GetAllJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetAllJobsResponse" message="tns:IJob_GetAllJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobsPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetAllJobsPaged" message="tns:IJob_GetAllJobsPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetAllJobsPagedResponse" message="tns:IJob_GetAllJobsPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AddJob" message="tns:IJob_AddJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AddJobResponse" message="tns:IJob_AddJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/UpdateJob" message="tns:IJob_UpdateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/UpdateJobResponse" message="tns:IJob_UpdateJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/DeleteJob" message="tns:IJob_DeleteJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/DeleteJobResponse" message="tns:IJob_DeleteJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetStaffJobs" message="tns:IJob_GetStaffJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetStaffJobsResponse" message="tns:IJob_GetStaffJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffJobsPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetStaffJobsPaged" message="tns:IJob_GetStaffJobsPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetStaffJobsPagedResponse" message="tns:IJob_GetStaffJobsPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AssignStaff" message="tns:IJob_AssignStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AssignStaffResponse" message="tns:IJob_AssignStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/RemoveStaff" message="tns:IJob_RemoveStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/RemoveStaffResponse" message="tns:IJob_RemoveStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetClient" message="tns:IJob_GetClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetClientResponse" message="tns:IJob_GetClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetClientJobs" message="tns:IJob_GetClientJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetClientJobsResponse" message="tns:IJob_GetClientJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientJobsPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetClientJobsPaged" message="tns:IJob_GetClientJobsPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetClientJobsPagedResponse" message="tns:IJob_GetClientJobsPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobsAndTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetAllJobsAndTasks" message="tns:IJob_GetAllJobsAndTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetAllJobsAndTasksResponse" message="tns:IJob_GetAllJobsAndTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetAllTasks" message="tns:IJob_GetAllTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetAllTasksResponse" message="tns:IJob_GetAllTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AddTask" message="tns:IJob_AddTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AddTaskResponse" message="tns:IJob_AddTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/UpdateTask" message="tns:IJob_UpdateTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/UpdateTaskResponse" message="tns:IJob_UpdateTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/CompleteTask" message="tns:IJob_CompleteTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/CompleteTaskResponse" message="tns:IJob_CompleteTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AddNote" message="tns:IJob_AddNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AddNoteResponse" message="tns:IJob_AddNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetDocuments" message="tns:IJob_GetDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetDocumentsResponse" message="tns:IJob_GetDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AddDocument" message="tns:IJob_AddDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AddDocumentResponse" message="tns:IJob_AddDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/GetCosts" message="tns:IJob_GetCosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/GetCostsResponse" message="tns:IJob_GetCosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/AddCost" message="tns:IJob_AddCost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/AddCostResponse" message="tns:IJob_AddCost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/UpdateCost" message="tns:IJob_UpdateCost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/UpdateCostResponse" message="tns:IJob_UpdateCost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/ApplyTemplate" message="tns:IJob_ApplyTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/ApplyTemplateResponse" message="tns:IJob_ApplyTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/CreateQuote" message="tns:IJob_CreateQuote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/CreateQuoteResponse" message="tns:IJob_CreateQuote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJob/CreateEstimate" message="tns:IJob_CreateEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJob/CreateEstimateResponse" message="tns:IJob_CreateEstimate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJob" type="tns:IJob">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClearCacheOfType">
+      <soap:operation soapAction="http://tempuri.org/IJob/ClearCacheOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentJobs">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetCurrentJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentJobsPaged">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetCurrentJobsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobState">
+      <soap:operation soapAction="http://tempuri.org/IJob/UpdateJobState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobs">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetAllJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobsPaged">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetAllJobsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJob">
+      <soap:operation soapAction="http://tempuri.org/IJob/AddJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJob">
+      <soap:operation soapAction="http://tempuri.org/IJob/UpdateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <soap:operation soapAction="http://tempuri.org/IJob/DeleteJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffJobs">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetStaffJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffJobsPaged">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetStaffJobsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignStaff">
+      <soap:operation soapAction="http://tempuri.org/IJob/AssignStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStaff">
+      <soap:operation soapAction="http://tempuri.org/IJob/RemoveStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientJobs">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetClientJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientJobsPaged">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetClientJobsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobsAndTasks">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetAllJobsAndTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTasks">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetAllTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <soap:operation soapAction="http://tempuri.org/IJob/AddTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTask">
+      <soap:operation soapAction="http://tempuri.org/IJob/UpdateTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTask">
+      <soap:operation soapAction="http://tempuri.org/IJob/CompleteTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap:operation soapAction="http://tempuri.org/IJob/AddNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDocument">
+      <soap:operation soapAction="http://tempuri.org/IJob/AddDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCosts">
+      <soap:operation soapAction="http://tempuri.org/IJob/GetCosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <soap:operation soapAction="http://tempuri.org/IJob/AddCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCost">
+      <soap:operation soapAction="http://tempuri.org/IJob/UpdateCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyTemplate">
+      <soap:operation soapAction="http://tempuri.org/IJob/ApplyTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuote">
+      <soap:operation soapAction="http://tempuri.org/IJob/CreateQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEstimate">
+      <soap:operation soapAction="http://tempuri.org/IJob/CreateEstimate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JobService">
+    <wsdl:port name="BasicHttpBinding_IJob" binding="tns:BasicHttpBinding_IJob">
+      <soap:address location="http://modernpractice2013.cloudapp.net/JobService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

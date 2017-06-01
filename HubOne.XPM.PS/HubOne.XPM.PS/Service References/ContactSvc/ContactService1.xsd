@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Contact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Addressee" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Client" nillable="true" type="tns:Client" />
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Supplier" nillable="true" type="tns:Supplier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Contact" nillable="true" type="tns:Contact" />
+  <xs:complexType name="WFMBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameUnformatted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberRecordsRequested" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StartPosition" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFMBase" nillable="true" type="tns:WFMBase" />
+  <xs:complexType name="Client">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountManager" nillable="true" type="tns:Staff" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgencyStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contacts" nillable="true" type="tns:ArrayOfContact" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GstRegistered" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsArchived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsProspect" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="tns:ArrayOfNote" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalPostCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalRegion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrepareGst" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactAddressee" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactMobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryContactSalutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferralSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedTaxAuthority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+  <xs:complexType name="Staff">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Jobs" nillable="true" type="tns:ArrayOfJob" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayrollCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Security" nillable="true" type="tns:Security" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Staff" nillable="true" type="tns:Staff" />
+  <xs:complexType name="ArrayOfJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Job" nillable="true" type="tns:Job" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJob" nillable="true" type="tns:ArrayOfJob" />
+  <xs:complexType name="Job">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Assigned" nillable="true" type="tns:ArrayOfStaff" />
+          <xs:element minOccurs="0" name="Client" nillable="true" type="tns:Client" />
+          <xs:element minOccurs="0" name="ClientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:ArrayOfDocument" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Manager" nillable="true" type="tns:Staff" />
+          <xs:element minOccurs="0" name="Milestones" nillable="true" type="tns:ArrayOfMilestone" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="tns:ArrayOfNote" />
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaskMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tasks" nillable="true" type="tns:ArrayOfTask" />
+          <xs:element minOccurs="0" name="TemplateID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:ArrayOfTemplate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Job" nillable="true" type="tns:Job" />
+  <xs:complexType name="ArrayOfStaff">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Staff" nillable="true" type="tns:Staff" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStaff" nillable="true" type="tns:ArrayOfStaff" />
+  <xs:complexType name="ArrayOfDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocument" nillable="true" type="tns:ArrayOfDocument" />
+  <xs:complexType name="Document">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Public" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:complexType name="ArrayOfMilestone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Milestone" nillable="true" type="tns:Milestone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMilestone" nillable="true" type="tns:ArrayOfMilestone" />
+  <xs:complexType name="Milestone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Public" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Milestone" nillable="true" type="tns:Milestone" />
+  <xs:complexType name="ArrayOfNote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Note" nillable="true" type="tns:Note" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNote" nillable="true" type="tns:ArrayOfNote" />
+  <xs:complexType name="Note">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Public" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Note" nillable="true" type="tns:Note" />
+  <xs:complexType name="ArrayOfTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Task" nillable="true" type="tns:Task" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTask" nillable="true" type="tns:ArrayOfTask" />
+  <xs:complexType name="Task">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstimatedMinutes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaskID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Task" nillable="true" type="tns:Task" />
+  <xs:complexType name="ArrayOfTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Template" nillable="true" type="tns:Template" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplate" nillable="true" type="tns:ArrayOfTemplate" />
+  <xs:complexType name="Template">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_job" nillable="true" type="tns:Job" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Template" nillable="true" type="tns:Template" />
+  <xs:complexType name="Security">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Security" nillable="true" type="tns:Security" />
+  <xs:complexType name="ArrayOfContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContact" nillable="true" type="tns:ArrayOfContact" />
+  <xs:complexType name="Supplier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WFMBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contacts" nillable="true" type="tns:ArrayOfContact" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsArchived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="tns:ArrayOfNote" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalPostCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalRegion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferralSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Supplier" nillable="true" type="tns:Supplier" />
+</xs:schema>

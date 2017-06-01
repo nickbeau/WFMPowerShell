@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a0b9e1e1-03ee-400c-9f0e-b5f3336dfec4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CustomFieldDefinitionService2.xsd" MetadataType="Schema" ID="6fd9a2d2-6b98-4286-bdeb-9ae2947d0238" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CustomFieldDefinitionService3.xsd" MetadataType="Schema" ID="e4db9773-72bd-40b0-962d-7729afbff919" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CustomFieldDefinitionService.wsdl" MetadataType="Wsdl" ID="2bc7f6e2-ac0c-45fe-8bf2-a43bc20859b0" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?wsdl" />
+    <MetadataFile FileName="CustomFieldDefinitionService.disco" MetadataType="Disco" ID="6eaf16f9-8d39-42f4-bfb0-c5dcabd51c8a" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?disco" />
+    <MetadataFile FileName="CustomFieldDefinitionService1.xsd" MetadataType="Schema" ID="29142de3-901a-44cf-9ae0-687bbf9fa54a" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CustomFieldDefinitionService.xsd" MetadataType="Schema" ID="36e6a54f-3e2e-407d-a0f7-c6df3baeb36e" SourceId="1" SourceUrl="http://modernpractice2013.cloudapp.net/CustomFieldDefinitionService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

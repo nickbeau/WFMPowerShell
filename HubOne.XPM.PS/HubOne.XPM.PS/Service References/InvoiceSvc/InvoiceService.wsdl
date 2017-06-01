@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InvoiceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://modernpractice2013.cloudapp.net/InvoiceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInvoice_ClearCacheOfType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfType" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_ClearCacheOfType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearCacheOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetCurrentInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetCurrentInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetCurrentInvoicesPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentInvoicesPaged" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetCurrentInvoicesPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentInvoicesPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetDraftInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetDraftInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetJobInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetJobInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetAllInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetAllInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetAllInvoicesPaged_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvoicesPaged" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetAllInvoicesPaged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvoicesPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetPayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayments" />
+  </wsdl:message>
+  <wsdl:message name="IInvoice_GetPayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInvoice">
+    <wsdl:operation name="ClearCacheOfType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/ClearCacheOfType" message="tns:IInvoice_ClearCacheOfType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/ClearCacheOfTypeResponse" message="tns:IInvoice_ClearCacheOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetCurrentInvoices" message="tns:IInvoice_GetCurrentInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetCurrentInvoicesResponse" message="tns:IInvoice_GetCurrentInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentInvoicesPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetCurrentInvoicesPaged" message="tns:IInvoice_GetCurrentInvoicesPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetCurrentInvoicesPagedResponse" message="tns:IInvoice_GetCurrentInvoicesPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetInvoice" message="tns:IInvoice_GetInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetInvoiceResponse" message="tns:IInvoice_GetInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetDraftInvoices" message="tns:IInvoice_GetDraftInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetDraftInvoicesResponse" message="tns:IInvoice_GetDraftInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetJobInvoices" message="tns:IInvoice_GetJobInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetJobInvoicesResponse" message="tns:IInvoice_GetJobInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetAllInvoices" message="tns:IInvoice_GetAllInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetAllInvoicesResponse" message="tns:IInvoice_GetAllInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvoicesPaged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetAllInvoicesPaged" message="tns:IInvoice_GetAllInvoicesPaged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetAllInvoicesPagedResponse" message="tns:IInvoice_GetAllInvoicesPaged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoice/GetPayments" message="tns:IInvoice_GetPayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoice/GetPaymentsResponse" message="tns:IInvoice_GetPayments_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInvoice" type="tns:IInvoice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClearCacheOfType">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/ClearCacheOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentInvoices">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetCurrentInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentInvoicesPaged">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetCurrentInvoicesPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftInvoices">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetDraftInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInvoices">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetJobInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvoices">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetAllInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvoicesPaged">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetAllInvoicesPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayments">
+      <soap:operation soapAction="http://tempuri.org/IInvoice/GetPayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InvoiceService">
+    <wsdl:port name="BasicHttpBinding_IInvoice" binding="tns:BasicHttpBinding_IInvoice">
+      <soap:address location="http://modernpractice2013.cloudapp.net/InvoiceService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
