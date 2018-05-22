@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/cm6ishv3ffcfcud0?svg=true)](https://ci.appveyor.com/project/nickbeau/wfmpowershell)
+
 # Xero Practice Mannager (WorkflowMax PowerShell)
 This library can be used to create a powershell module to work with Xero Practice Manager or WorkflowMax. It leverages the [WorkflowMax API](https://www.workflowmax.com/api/overview) as currently published.
 
