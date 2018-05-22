@@ -1,22 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Configuration;
-using System.Diagnostics;
 using System.Dynamic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
-using System.Management.Automation.Runspaces;
-using System.Security;
-using System.Web;
-using System.Web.Caching;
-using System.Web.Configuration;
 using System.Windows.Forms;
 using DevDefined.OAuth.Framework;
-using HubOne.PS.Classes;
 using HubOne.PS.ClientSvc;
 using HubOne.PS.ContactSvc;
 using HubOne.PS.CostSvc;
@@ -34,7 +23,6 @@ using HubOne.PS.TimeSvc;
 using Cost = HubOne.PS.JobSvc.Cost;
 using Staff = HubOne.PS.StaffSvc.Staff;
 using Supplier = HubOne.PS.SupplierSvc.Supplier;
-using ChargifyNET;
 
 namespace HubOne.PS
 {
@@ -62,6 +50,8 @@ namespace HubOne.PS
             {
                 var session = SessionState.PSVariable;
                 session.Set("WfmxAccountKey", Key);
+
+                //Set to the Default Internal XPM or WorkflowMax Key
                 session.Set("WfmxApiKey", "14C10292983D48CE86E1AA1FE0F8DDFE");
                 if (session.GetValue("DefaultRegion") == null)
                 {
@@ -90,6 +80,9 @@ namespace HubOne.PS
         [Parameter(Position = 0, Mandatory = true)] 
         public string Region = "Default";
 
+        /// <summary>
+        /// Main Method to Execute setting g the default region
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -156,6 +149,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Show, "WFMKey")]
     public class Show_WFMKey : PSCmdlet
     {
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -184,15 +180,27 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Open, "Xero")]
     public class Open_Xero : PSCmdlet
     {
+        /// <summary>
+        /// The SharePoint URL
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Address;
 
+        /// <summary>
+        /// The Office 365 UserName
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string User;
 
+        /// <summary>
+        /// The Office365 Password
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string Password;
 
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -326,12 +334,22 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMClient")]
     public class Get_WFMClient : PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Clinet
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Whether to or not includecustomfields.
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)]
         public bool IncludeCustomFields;
 
+
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -385,6 +403,11 @@ namespace HubOne.PS
             }
         }
 
+        /// <summary>
+        /// Occurs when a property has been changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void psClient_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             Utilities.UpdateClientProperty((Objects.PsClient) sender, e.PropertyName);
