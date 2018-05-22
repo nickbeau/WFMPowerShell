@@ -284,7 +284,14 @@ namespace HubOne.PS.Properties
       ForceFullStates = forceFullStates;
     }
 
+        /// <summary>
+        /// The FDT
+        /// </summary>
     public string FDT { get; private set; }
+
+        /// <summary>
+        /// Whether to or not force full States
+        /// </summary>
     public bool ForceFullStates { get; private set; }
   }
 

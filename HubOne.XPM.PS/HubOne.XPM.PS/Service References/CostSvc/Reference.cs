@@ -130,6 +130,9 @@ namespace HubOne.PS.CostSvc {
             }
         }
         
+        /// <summary>
+        /// The Quantity of the Cost
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public double Quantity {
             get {

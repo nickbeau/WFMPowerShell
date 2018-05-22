@@ -118,6 +118,9 @@ namespace HubOne.PS.ContactSvc {
             }
         }
         
+        /// <summary>
+        /// The Name of the contact unformatted in any way
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string NameUnformatted {
             get {

@@ -413,6 +413,11 @@ namespace HubOne.PS
             Utilities.UpdateClientProperty((Objects.PsClient) sender, e.PropertyName);
         }
 
+        /// <summary>
+        /// Occurs when an Expando Object Property Changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void expandoClient_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             Utilities.UpdateExpandoClientProperty((ExpandoObject)sender, e.PropertyName);
@@ -426,12 +431,23 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMClientByName")]
     public class Get_WFMClientByName : PSCmdlet
     {
+        /// <summary>
+        /// The Name of the Client
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)]
         public string ClientName;
 
+        /// <summary>
+        /// Whether to include custom fields or not
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)]
         public bool IncludeCustomFields;
 
+
+
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();

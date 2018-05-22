@@ -448,15 +448,26 @@ namespace HubOne.PS
         #region PsCategory
         public class PsCategory : INotifyPropertyChanged
         {
+            /// <summary>
+            /// The Category
+            /// </summary>
+            /// <param name="wfmxCategory">The WorkflowMax Category</param>
             public PsCategory(Category wfmxCategory)
             {
                 Id = wfmxCategory.ID;
                 Name = wfmxCategory.Name;
             }
 
+            /// <summary>
+            /// The Unique ID
+            /// </summary>
             public string Id { get; set; }
 
             private string _name;
+
+            /// <summary>
+            /// The Name of the Client
+            /// </summary>
             public string Name
             {
                 get { return _name; }
@@ -467,8 +478,15 @@ namespace HubOne.PS
                 }
             }
 
+            /// <summary>
+            /// Triggered when a property is changed
+            /// </summary>
             public event PropertyChangedEventHandler PropertyChanged;
 
+            /// <summary>
+            /// Occurs when a property is changed to write back
+            /// </summary>
+            /// <param name="propertyName">The Name of the Property (Default null)</param>
             [NotifyPropertyChangedInvocator]
             protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
             {

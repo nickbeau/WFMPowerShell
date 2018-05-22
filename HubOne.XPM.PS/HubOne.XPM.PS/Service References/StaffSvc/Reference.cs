@@ -244,6 +244,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Status of the Staff Member
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Status {
             get {

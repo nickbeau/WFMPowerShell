@@ -188,6 +188,9 @@ namespace HubOne.PS.ClientSvc {
             }
         }
         
+        /// <summary>
+        /// The Company Number (.e.g A.C.N in Australia)
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string CompanyNumber {
             get {
