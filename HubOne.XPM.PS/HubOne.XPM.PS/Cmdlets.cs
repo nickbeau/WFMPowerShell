@@ -769,12 +769,21 @@ namespace HubOne.PS
         [Parameter(Position = 23, Mandatory = false)] 
         public string PrepareGst { get; set; }
 
+        /// <summary>
+        /// Whether or not a signed tax authority exists
+        /// </summary>
         [Parameter(Position = 24, Mandatory = false)] 
         public string SignedTaxAuthority { get; set; }
 
+        /// <summary>
+        /// the Agency Status
+        /// </summary>
         [Parameter(Position = 25, Mandatory = false)] 
         public string AgencyStatus { get; set; }
 
+        /// <summary>
+        /// ProcessRecord is where work is done
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -849,9 +858,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMClient")]
     public class Remove_WFMClient : PSCmdlet
     {
+        /// <summary>
+        /// The iD Of the Client
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -888,9 +903,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Set, "ArchiveWFMClient")]
     public class Archive_WFMClient : PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Client
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -932,9 +953,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMClientContacts")]
     public class Get_WFMClientContacts : PSCmdlet
     {
+        /// <summary>
+        /// The iD of the client
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -981,9 +1008,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMClientContact")]
     public class Get_WFMClientContact : PSCmdlet
     {
+        /// <summary>
+        /// The iD of the Contact
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ContactId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1025,30 +1058,57 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMClientContact")]
     public class New_WFMClientContact : PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Client
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Contact Name
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Contact Phone
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string Phone;
 
+        /// <summary>
+        /// Contact Addressee
+        /// </summary>
         [Parameter(Position = 3, Mandatory = false)] 
         public string Addressee;
 
+        /// <summary>
+        /// Contatc Mobile #
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Mobile;
 
+        /// <summary>
+        /// Contact Email Address
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string Email;
 
+        /// <summary>
+        /// Contact Salutation
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string Salutation;
 
+        /// <summary>
+        /// ContactPosition
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public string Position;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1106,13 +1166,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMClientContact")]
     public class Remove_WFMClientContact : PSCmdlet
     {
+        /// <summary>
+        /// The Client ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// The Contact ID
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string ContactId;
 
-
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1155,9 +1223,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMContact")]
     public class Get_WFMContact : PSCmdlet
     {
+        /// <summary>
+        /// The Contact ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ContactId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1200,6 +1274,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMContacts")]
     public class Get_WFMContacts : PSCmdlet
     {
+        /// <summary>
+        /// Work done here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1254,6 +1331,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMCosts")]
     public class Get_WFMCosts : PSCmdlet
     {
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1331,33 +1411,63 @@ namespace HubOne.PS
     public class New_WFMCost : PSCmdlet
     {
 
+        /// <summary>
+        /// Cost Date
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Date;
 
+        /// <summary>
+        /// Comst Description
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Quantity
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public double Quantity;
 
+        /// <summary>
+        /// Cost per unit
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public double UnitCost;
 
+        /// <summary>
+        /// Price per unit
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public double UnitPrice;
 
+        /// <summary>
+        /// Supplier ID
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Billable or not
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public bool Billable;
 
+        /// <summary>
+        /// Note
+        /// </summary>
         [Parameter(Position = 8, Mandatory = false)] 
         public string Note;
 
+        /// <summary>
+        /// CostCode
+        /// </summary>
         [Parameter(Position = 9, Mandatory = false)] 
         public string Code;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1403,9 +1513,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMCost")]
     public class Remove_WFMCost : PSCmdlet
     {
+        /// <summary>
+        /// Cost ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string CostId;
 
+        /// <summary>
+        /// Work happens here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1449,6 +1565,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMCosts")]
     public class Remove_WFMCosts: PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Cost
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string CostId;
 

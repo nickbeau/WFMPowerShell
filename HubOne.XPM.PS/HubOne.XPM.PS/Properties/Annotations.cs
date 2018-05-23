@@ -349,6 +349,7 @@ namespace HubOne.PS.Properties
   [BaseTypeRequired(typeof(Attribute))]
   public sealed class BaseTypeRequiredAttribute : Attribute
   {
+
     /// <summary>
     /// Initializes new instance of BaseTypeRequiredAttribute
     /// </summary>
@@ -546,6 +547,9 @@ namespace HubOne.PS.Properties
   [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
   public sealed class AspMvcActionAttribute : Attribute
   {
+        ./// <summary>
+        /// anon property
+        /// </summary>
     [UsedImplicitly] public string AnonymousProperty { get; private set; }
 
     public AspMvcActionAttribute() { }
