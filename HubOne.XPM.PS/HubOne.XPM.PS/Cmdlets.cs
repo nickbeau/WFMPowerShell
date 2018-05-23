@@ -4921,12 +4921,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTimesheets")]
     public class Get_WFMTimesheets : PSCmdlet
     {
+        /// <summary>
+        /// Date From
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// Date To
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Work Done Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4977,15 +4986,27 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTimesheetsByStaff")]
     public class Get_WFMTimesheetsByStaff : PSCmdlet
     {
+        /// <summary>
+        /// Staff ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Date From
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// Date To
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
