@@ -3369,9 +3369,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMPurchaseOrdersByJob")]
     public class Get_WFMPurchaseOrdersByJob : PSCmdlet
     {
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3411,22 +3417,39 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMPurchaseOrder")]
     public class New_WFMPurchaseOrder: PSCmdlet
     {
-
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// The Supplier ID
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Description
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Delivery Address
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public string DeliveryAddress;
 
+        /// <summary>
+        /// The Date
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public DateTime Date;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3491,22 +3514,39 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMPurchaseOrderDraft")]
     public class New_WFMPurchaseOrderDraft: PSCmdlet
     {
-
+        /// <summary>
+        /// The JobID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// The Supplier ID
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Description
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Delivery Address of the Draft PO
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public string DeliveryAddress;
 
+        /// <summary>
+        /// Date
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public DateTime Date;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3574,6 +3614,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMQuotesCurrent")]
     public class Get_WFMQuotesCurrent : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3614,6 +3657,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMQuotesDraft")]
     public class Get_WFMQuotesDraft : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3654,12 +3700,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMQuotes")]
     public class Get_WFMQuotes : PSCmdlet
     {
+        /// <summary>
+        /// Quote Date From
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// Quote Date TO
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3704,9 +3759,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMQuote")]
     public class Get_WFMQuote : PSCmdlet
     {
+        /// <summary>
+        /// Quote ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string QuoteId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3748,6 +3809,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMStaff")]
     public class Get_WFMStaff : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3794,9 +3858,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMStaffMember")]
     public class Get_WFMStaffMember : PSCmdlet
     {
+        /// <summary>
+        /// Staff Member ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3840,25 +3910,44 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMStaffMember")]
     public class New_WFMStaffMember: PSCmdlet
     {
-
+        /// <summary>
+        /// Staff Member Name
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Name;
-
+        /// <summary>
+        /// Staff Member Address
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public string Address;
 
+        /// <summary>
+        /// Staff Member Phone
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string Phone;
 
+        /// <summary>
+        /// Staff Member mobile
+        /// </summary>
         [Parameter(Position = 3, Mandatory = false)] 
         public string Mobile;
 
+        /// <summary>
+        /// Staff Member Email
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Email;
 
+        /// <summary>
+        /// Staff Member Payroll Code
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string PayrollCode;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3915,12 +4004,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Set, "WFMStaffMemberEnable")]
     public class Enable_WFMStaffEnable : PSCmdlet
     {
+        /// <summary>
+        /// Staff ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Staff Login
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public string Login;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3969,14 +4067,20 @@ namespace HubOne.PS
     }
 
     /// <summary>
-    /// Disables a WorkflowMAX Staff Member from Login to WorkflowMax
+    /// Disables a WorkflowMAX Staff Member from Login to WorkflowMax or XPM
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "WFMStaffMemberDisable")]
     public class Disable_WFMStaffMemberDisable : PSCmdlet
     {
+        /// <summary>
+        /// Staff ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4024,9 +4128,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMStaffMember")]
     public class Remove_WFMStaffMember : PSCmdlet
     {
+        /// <summary>
+        /// Staff ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4068,9 +4178,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMSupplier")]
     public class Get_WFMSupplier : PSCmdlet
     {
+        /// <summary>
+        /// Supplier ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4113,9 +4229,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMSuppliers")]
     public class Get_WFMSuppliers : PSCmdlet
     {
+        /// <summary>
+        /// SearchFilter
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public string SearchFilter;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4172,54 +4294,104 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMSupplier")]
     public class New_WFMSupplier : PSCmdlet
     {
+        /// <summary>
+        /// Supplier Name
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Supplier Phone
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public string Phone;
 
+        /// <summary>
+        /// Supplier Address
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string Address;
 
+        /// <summary>
+        /// Supplier City
+        /// </summary>
         [Parameter(Position = 3, Mandatory = false)] 
         public string City;
-
+        /// <summary>
+        /// Supplier Region
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Region;
 
+        /// <summary>
+        /// Supplier PostCode
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string PostCode;
 
+        /// <summary>
+        /// Supplier Country
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string Country;
 
+        /// <summary>
+        /// Supplier Website
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public string Website;
 
+        /// <summary>
+        /// Supplier PostalAddress
+        /// </summary>
         [Parameter(Position = 8, Mandatory = false)] 
         public string PostalAddress { get; set; }
 
+        /// <summary>
+        /// Supplier Postal City
+        /// </summary>
         [Parameter(Position = 9, Mandatory = false)] 
         public string PostalCity { get; set; }
 
+        /// <summary>
+        /// Supplier Postal Region
+        /// </summary>
         [Parameter(Position = 10, Mandatory = false)] 
         public string PostalRegion { get; set; }
 
+        /// <summary>
+        /// Supplier  Postal PostCode
+        /// </summary>
         [Parameter(Position = 11, Mandatory = false)] 
         public string PostalPostCode { get; set; }
 
+        /// <summary>
+        /// Supplier Postal Country
+        /// </summary>
         [Parameter(Position = 12, Mandatory = false)] 
         public string PostalCountry { get; set; }
 
+        /// <summary>
+        /// Supplier Fax
+        /// </summary>
         [Parameter(Position = 13, Mandatory = false)] 
         public string Fax { get; set; }
 
+        /// <summary>
+        /// Supplier Refrerral Source
+        /// </summary>
         [Parameter(Position = 14, Mandatory = false)] 
         public string ReferralSource { get; set; }
 
+        /// <summary>
+        /// Supplier IsArchived (True = yes)
+        /// </summary>
         [Parameter(Position = 15, Mandatory = false)] 
-        public string IsArchived { get; set; }
-
+        public string IsArchived { get; set;
+        }
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
