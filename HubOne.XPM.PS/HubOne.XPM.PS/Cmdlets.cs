@@ -2886,6 +2886,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMLeadsCurrent")]
     public class Get_WFMLeadsCurrent : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2926,12 +2929,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMLeads")]
     public class Get_WFMLeads : PSCmdlet
     {
+        /// <summary>
+        /// The DAte From
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// The Date To
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2977,9 +2989,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMLead")]
     public class Get_WFMLead : PSCmdlet
     {
+        /// <summary>
+        /// The Lead ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string LeadId;
 
+        /// <summary>
+        /// Do Work Jere
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3017,28 +3035,51 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMLead")]
     public class New_WFMLead: PSCmdlet
     {
-
+        /// <summary>
+        /// Lead Name
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Lead Description
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Client ID
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Owner ID (User)
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public string OwnerId;
 
+        /// <summary>
+        /// Estimated Value
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public double EstimatedValue;
 
+        /// <summary>
+        /// The ContactID
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string ContactId;
 
+        /// <summary>
+        /// The Template ID
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string TemplateId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3092,6 +3133,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMLeadCategories")]
     public class Get_WFMLeadCategories : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3134,6 +3178,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMPurchaseOrdersCurrent")]
     public class Get_WFMPurchaseOrdersCurrent : PSCmdlet
     {
+        /// <summary>
+        /// Do Work HEre
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3174,9 +3221,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMPurchaseOrder")]
     public class Get_WFMPurchaseOrder : PSCmdlet
     {
+        /// <summary>
+        /// The PO ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string PurchaseOrderId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3214,6 +3267,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMPurchaseOrdersDraft")]
     public class Get_WFMPurchaseOrdersDraft : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -3254,12 +3310,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMPurchaseOrders")]
     public class Get_WFMPurchaseOrders : PSCmdlet
     {
+        /// <summary>
+        /// Date From
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// Date To
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
