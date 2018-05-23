@@ -2111,9 +2111,16 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJob")]
     public class Get_WFMJob : PSCmdlet
     {
+
+        /// <summary>
+        /// The iD of the Job
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Work is done here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2172,21 +2179,39 @@ namespace HubOne.PS
         [Parameter(Position = 1, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Description
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Start Date
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public string StartDate;
 
+        /// <summary>
+        /// Due Date
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public string DueDate;
 
+        /// <summary>
+        /// Template ID
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string TemplateId;
 
+        /// <summary>
+        /// The Contact ID
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string ContactId;
 
+        /// <summary>
+        /// Do Work Ehere
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2244,9 +2269,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMJob")]
     public class Remove_WFMJob : PSCmdlet
     {
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2287,12 +2318,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Add, "WFMJobDocument")]
     public class Add_WFMJobDocument : PSCmdlet
     {
+        /// <summary>
+        /// The Jon ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)]
         public string JobId;
 
+        /// <summary>
+        /// The Note Text 
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)]
         public string NoteText;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2366,15 +2406,27 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Add, "WFMJobNote")]
     public class Add_WFMJobNote : PSCmdlet
     {
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)]
         public string JobId;
 
+        /// <summary>
+        /// The Title
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)]
         public string Title;
 
+        /// <summary>
+        /// The Note Text or Content
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)]
         public string Text;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2427,9 +2479,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobsByClient")]
     public class Get_WFMJobsByClient : PSCmdlet
     {
+        /// <summary>
+        /// The Client ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ClientId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2477,9 +2535,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobsByStaff")]
     public class Get_WFMJobsByStaff : PSCmdlet
     {
+        /// <summary>
+        /// The Staff Member
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2528,12 +2592,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobsAndTasks")]
     public class Get_WFMJobAndTasks : PSCmdlet
     {
+        /// <summary>
+        /// Complete or Note
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public bool Complete;
 
+        /// <summary>
+        /// The Start Date
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public string StartDate;
 
+        /// <summary>
+        /// The Due Date
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string DueDate;
 
