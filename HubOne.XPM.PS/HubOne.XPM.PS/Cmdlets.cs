@@ -1798,7 +1798,9 @@ namespace HubOne.PS
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
-        //DateTo
+        /// <summary>
+        /// The End Date of the Invoice
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
@@ -1896,9 +1898,16 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoicePayments")]
     public class Get_WFMInvoicePayments : PSCmdlet
     {
+        /// <summary>
+        /// The Invoice ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string InvoiceId;
 
+
+        /// <summary>
+        /// Do Work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1940,9 +1949,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoicesByJob")]
     public class Get_WFMInvoicesByJob : PSCmdlet
     {
+        /// <summary>
+        /// The JobID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Here we do work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1988,6 +2003,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobsCurrent")]
     public class Get_WFMJobsCurrent : PSCmdlet
     {
+        /// <summary>
+        /// Here we do work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2033,12 +2051,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobs")]
     public class Get_WFMJobs : PSCmdlet
     {
+        /// <summary>
+        /// Job Date From
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public DateTime DateFrom;
 
+        /// <summary>
+        /// Job Date To
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// Here we do work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
