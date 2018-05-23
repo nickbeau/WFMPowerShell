@@ -1571,6 +1571,10 @@ namespace HubOne.PS
         [Parameter(Position = 0, Mandatory = true)] 
         public string CostId;
 
+
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1648,9 +1652,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMCustomField")]
     public class Get_WFMCustomField : PSCmdlet
     {
+        /// <summary>
+        /// The name of the customf ield
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)]
         public string CustomFieldName;
 
+        /// <summary>
+        /// ProcessReord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1696,6 +1706,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoicesCurrent")]
     public class Get_WFMInvoicesCurrent : PSCmdlet
     {
+        /// <summary>
+        /// ProcessRecord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1736,6 +1749,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoicesDraft")]
     public class Get_WFMInvoicesDraft : PSCmdlet
     {
+        /// <summary>
+        /// ProcessReord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1776,12 +1792,19 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoices")]
     public class Get_WFMInvoices : PSCmdlet
     {
+        /// <summary>
+        /// DateFrom
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public DateTime DateFrom;
 
+        //DateTo
         [Parameter(Position = 1, Mandatory = false)] 
         public DateTime DateTo;
 
+        /// <summary>
+        /// ProcessReord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -1827,9 +1850,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMInvoice")]
     public class Get_WFMInvoice : PSCmdlet
     {
+        /// <summary>
+        /// The Invoice Id
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string InvoiceId;
 
+        /// <summary>
+        /// ProcessReord does the work
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
