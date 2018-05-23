@@ -71,6 +71,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// Mobile Phone #
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Mobile {
             get {
@@ -84,6 +87,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Payroll code of the staff member
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string PayrollCode {
             get {
@@ -97,6 +103,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Phone Number of the staff Member
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Phone {
             get {
@@ -110,6 +119,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Security Properties of the staff member
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public HubOne.PS.StaffSvc.Security Security {
             get {
@@ -124,6 +136,9 @@ namespace HubOne.PS.StaffSvc {
         }
     }
     
+    /// <summary>
+    /// WorkflowMax Base Object
+    /// </summary>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WFMBase", Namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes")]
@@ -156,6 +171,9 @@ namespace HubOne.PS.StaffSvc {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StatusField;
         
+        /// <summary>
+        /// Staff Extension Data
+        /// </summary>
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -166,6 +184,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// WorkflowMax Base Error De3scription
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ErrorDescription {
             get {
@@ -179,6 +200,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Unique ID of the object
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ID {
             get {
@@ -192,6 +216,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// Whether or not the object is deleted
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string IsDeleted {
             get {
@@ -205,6 +232,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The name of the object
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name {
             get {
@@ -218,6 +248,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The number of records requested
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> NumberRecordsRequested {
             get {
@@ -231,6 +264,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The start position, to be used for paging.
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> StartPosition {
             get {
@@ -260,8 +296,15 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// Occurs when a property is changed
+        /// </summary>
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
+        /// <summary>
+        /// Raised when a property is changed
+        /// </summary>
+        /// <param name="propertyName">The property name</param>
         protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
@@ -270,6 +313,9 @@ namespace HubOne.PS.StaffSvc {
         }
     }
     
+    /// <summary>
+    /// The WorkflowMax Response
+    /// </summary>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WFMResponse", Namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes")]
@@ -282,6 +328,9 @@ namespace HubOne.PS.StaffSvc {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Status1Field;
         
+        /// <summary>
+        /// The XPM Error Description
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute(Name="ErrorDescription")]
         public string ErrorDescription1 {
             get {
@@ -295,6 +344,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Error Reponse Status
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute(Name="Status")]
         public string Status1 {
             get {
@@ -309,6 +361,9 @@ namespace HubOne.PS.StaffSvc {
         }
     }
     
+    /// <summary>
+    /// Staff Security Object
+    /// </summary>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Security", Namespace="http://schemas.datacontract.org/2004/07/WorkFlowMAXService.WFMDataTypes")]
@@ -321,6 +376,9 @@ namespace HubOne.PS.StaffSvc {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LoginField;
         
+        /// <summary>
+        /// Extension Data About the Staff Member
+        /// </summary>
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -331,6 +389,9 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// The Login Address
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Login {
             get {
@@ -344,8 +405,15 @@ namespace HubOne.PS.StaffSvc {
             }
         }
         
+        /// <summary>
+        /// Triggered when a property has changed
+        /// </summary>
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
+        /// <summary>
+        /// Raised when a property has changed
+        /// </summary>
+        /// <param name="propertyName">The property Name</param>
         protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
@@ -354,10 +422,18 @@ namespace HubOne.PS.StaffSvc {
         }
     }
     
+    /// <summary>
+    /// A Staff Object Imterface
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StaffSvc.IStaff")]
     public interface IStaff {
         
+        /// <summary>
+        /// The Total Staff #
+        /// </summary>
+        /// <param name="accountKey">The Account Key</param>
+        /// <returns></returns>
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseInterface/GetTotal", ReplyAction="http://tempuri.org/IBaseInterface/GetTotalResponse")]
         int GetTotal(string accountKey);
         

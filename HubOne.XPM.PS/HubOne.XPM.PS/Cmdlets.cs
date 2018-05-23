@@ -533,6 +533,9 @@ namespace HubOne.PS
         [Parameter(Position = 0, Mandatory = false)] 
         public string SearchFilter;
 
+        /// <summary>
+        /// Whether to Include Custom Fields (or not)
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public bool IncludeCustomFields;
 

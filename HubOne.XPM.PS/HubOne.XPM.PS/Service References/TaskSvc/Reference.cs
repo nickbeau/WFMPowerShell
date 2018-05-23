@@ -58,6 +58,9 @@ namespace HubOne.PS.TaskSvc {
             }
         }
         
+        /// <summary>
+        /// The Due Date
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DueDate {
             get {

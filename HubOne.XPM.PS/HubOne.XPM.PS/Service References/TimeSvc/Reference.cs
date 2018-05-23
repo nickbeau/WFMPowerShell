@@ -64,6 +64,9 @@ namespace HubOne.PS.TimeSvc {
             }
         }
         
+        /// <summary>
+        /// The Date of the TS Entry
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Date {
             get {

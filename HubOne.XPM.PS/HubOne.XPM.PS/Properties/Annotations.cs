@@ -184,6 +184,11 @@ namespace HubOne.PS.Properties
         /// Default Constructor
         /// </summary>
     public NotifyPropertyChangedInvocatorAttribute() { }
+
+        /// <summary>
+        /// The appropriate Attribute
+        /// </summary>
+        /// <param name="parameterName">Para,eter Name</param>
     public NotifyPropertyChangedInvocatorAttribute(string parameterName)
     {
       ParameterName = parameterName;
