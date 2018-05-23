@@ -5055,9 +5055,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTimesheet")]
     public class Get_WFMTimesheet : PSCmdlet
     {
+        /// <summary>
+        /// TimeSheet ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string TimesheetId;
 
+        /// <summary>
+        /// Work Done Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
