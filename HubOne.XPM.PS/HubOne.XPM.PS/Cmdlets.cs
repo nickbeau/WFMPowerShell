@@ -2610,6 +2610,9 @@ namespace HubOne.PS
         [Parameter(Position = 2, Mandatory = false)] 
         public string DueDate;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2655,12 +2658,21 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Add, "WFMJobsAddTask")]
     public class Add_WFMJobsAddTask : PSCmdlet
     {
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// The Task ID
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string TaskId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2702,9 +2714,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMJobCosts")]
     public class Get_WFMJobCosts : PSCmdlet
     {
+        /// <summary>
+        /// The JobID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Do Work HEre
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -2750,36 +2768,69 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMAddJobCost")]
     public class New_WFMJobCost : PSCmdlet
     {
+        /// <summary>
+        /// The Job ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// The Date
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string Date;
 
+        /// <summary>
+        /// Description
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string Description;
 
+        /// <summary>
+        /// Quantity as an integer or double
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public double Quantity;
 
+        /// <summary>
+        /// Cost per Unit
+        /// </summary>
         [Parameter(Position = 4, Mandatory = true)] 
         public double UnitCost;
 
+        /// <summary>
+        /// Price per unit
+        /// </summary>
         [Parameter(Position = 5, Mandatory = true)] 
         public double UnitPrice;
 
+        /// <summary>
+        /// Suppier ID
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Whether this item is billable or not
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public bool Billable;
 
+        /// <summary>
+        /// The Note
+        /// </summary>
         [Parameter(Position = 8, Mandatory = false)] 
         public string Note;
 
+        /// <summary>
+        /// The Code
+        /// </summary>
         [Parameter(Position = 9, Mandatory = false)] 
         public string Code;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
