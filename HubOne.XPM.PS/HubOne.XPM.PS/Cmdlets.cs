@@ -4718,6 +4718,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTasks")]
     public class Get_WFMTasks : PSCmdlet
     {
+        /// <summary>
+        /// Do Work here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4764,9 +4767,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTask")]
     public class Get_WFMTask : PSCmdlet
     {
+        /// <summary>
+        /// Task ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string TaskId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4812,6 +4821,9 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTemplates")]
     public class Get_WFMTemplates : PSCmdlet
     {
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4855,9 +4867,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMTimesheetsByJob")]
     public class Get_WFMTimesheetsByJob : PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Job
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
