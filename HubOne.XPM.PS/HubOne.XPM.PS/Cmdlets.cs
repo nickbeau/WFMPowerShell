@@ -4458,9 +4458,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMSupplier")]
     public class Remove_WFMSupplier : PSCmdlet
     {
+        /// <summary>
+        /// Supplier ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Work Done Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4497,9 +4503,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Set, "ArchiveWFMSupplier")]
     public class Archive_WFMSupplier : PSCmdlet
     {
+        /// <summary>
+        /// Suplier ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Work Done here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4542,9 +4554,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Get, "WFMSupplierContact")]
     public class Get_WFMSupplierContact : PSCmdlet
     {
+        /// <summary>
+        /// Contact ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string ContactId;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -4587,30 +4605,57 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMSupplierContact")]
     public class New_WFMSupplierContact : PSCmdlet
     {
+        /// <summary>
+        /// Supplier ID
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string SupplierId;
 
+        /// <summary>
+        /// Name
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Phone
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string Phone;
 
+        /// <summary>
+        /// Address
+        /// </summary>
         [Parameter(Position = 3, Mandatory = false)] 
         public string Addressee;
 
+        /// <summary>
+        /// CellPhone/Mobile
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Mobile;
 
+        /// <summary>
+        /// Email Addresss
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string Email;
 
+        /// <summary>
+        /// Salutation
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string Salutation;
 
+        /// <summary>
+        /// Position
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public string Position;
 
+        /// <summary>
+        /// Do Work Here
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
