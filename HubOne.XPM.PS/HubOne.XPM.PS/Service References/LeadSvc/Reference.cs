@@ -153,6 +153,9 @@ namespace HubOne.PS.LeadSvc {
             }
         }
         
+        /// <summary>
+        /// The ID of the Owner(User) of the Lead
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OwnerID {
             get {

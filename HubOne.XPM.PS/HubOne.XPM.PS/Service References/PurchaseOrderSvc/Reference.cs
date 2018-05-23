@@ -169,6 +169,9 @@ namespace HubOne.PS.PurchaseOrderSvc {
             }
         }
         
+        /// <summary>
+        /// The Supplier of the Purchase Order
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public HubOne.PS.PurchaseOrderSvc.Supplier Supplier {
             get {

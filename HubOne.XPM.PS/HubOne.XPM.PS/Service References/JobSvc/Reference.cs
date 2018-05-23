@@ -177,6 +177,9 @@ namespace HubOne.PS.JobSvc {
             }
         }
         
+        /// <summary>
+        /// The WorkflowMax Internal ID of the Job
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string InternalID {
             get {

@@ -155,6 +155,9 @@ namespace HubOne.PS.InvoiceSvc {
             }
         }
         
+        /// <summary>
+        /// The Contact associated with the Invoice
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public HubOne.PS.InvoiceSvc.Contact Contact {
             get {

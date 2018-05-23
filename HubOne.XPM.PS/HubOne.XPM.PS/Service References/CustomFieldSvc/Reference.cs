@@ -127,6 +127,9 @@ namespace HubOne.PS.CustomFieldSvc {
             }
         }
         
+        /// <summary>
+        /// Whether ot use the Job or Not
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool UseJob {
             get {

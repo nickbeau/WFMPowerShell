@@ -146,6 +146,8 @@ namespace HubOne.PS.CostSvc {
             }
         }
         
+        /// <summary>
+        /// The Supplier of the Cost        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public HubOne.PS.CostSvc.Supplier Supplier {
             get {

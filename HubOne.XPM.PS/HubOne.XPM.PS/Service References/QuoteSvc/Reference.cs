@@ -209,6 +209,9 @@ namespace HubOne.PS.QuoteSvc {
             }
         }
         
+        /// <summary>
+        /// The Estimated cost of the quote
+        /// </summary>
         [System.Runtime.Serialization.DataMemberAttribute()]
         public double EstimatedCost {
             get {
