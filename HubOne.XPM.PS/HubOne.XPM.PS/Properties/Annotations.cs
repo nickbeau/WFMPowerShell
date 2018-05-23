@@ -547,7 +547,7 @@ namespace HubOne.PS.Properties
   [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
   public sealed class AspMvcActionAttribute : Attribute
   {
-        ./// <summary>
+        /// <summary>
         /// anon property
         /// </summary>
     [UsedImplicitly] public string AnonymousProperty { get; private set; }
