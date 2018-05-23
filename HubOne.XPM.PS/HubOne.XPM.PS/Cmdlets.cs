@@ -726,24 +726,46 @@ namespace HubOne.PS
         [Parameter(Position = 16, Mandatory = false)] 
         public string ReferralSource { get; set; }
 
+        /// <summary>
+        /// Export Code
+        /// </summary>
         [Parameter(Position = 17, Mandatory = false)] 
         public string ExportCode { get; set; }
 
+        /// <summary>
+        /// Wherether or not this is a propsect 
+        /// </summary>
         [Parameter(Position = 18, Mandatory = false)] 
         public string IsProspect { get; set; }
 
+
+        /// <summary>
+        /// The Type
+        /// </summary>
         [Parameter(Position = 19, Mandatory = false)] 
         public string TypeName { get; set; }
 
+        /// <summary>
+        /// Whether or not the client is archived
+        /// </summary>
         [Parameter(Position = 20, Mandatory = false)] 
         public string IsArchived { get; set; }
 
+        /// <summary>
+        /// Company # or ACN in AU
+        /// </summary>
         [Parameter(Position = 21, Mandatory = false)] 
         public string CompanyNumber { get; set; }
 
+        /// <summary>
+        /// GST Registered?
+        /// </summary>
         [Parameter(Position = 22, Mandatory = false)] 
         public string GstRegistered { get; set; }
 
+        /// <summary>
+        /// Whether GST report needs to be prespared
+        /// </summary>
         [Parameter(Position = 23, Mandatory = false)] 
         public string PrepareGst { get; set; }
 
