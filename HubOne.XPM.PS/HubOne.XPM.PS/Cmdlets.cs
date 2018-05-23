@@ -701,15 +701,28 @@ namespace HubOne.PS
         [Parameter(Position = 12, Mandatory = false)] 
         public string PostalRegion { get; set; }
 
+        
+        /// <summary>
+        /// Client Postal PostCode
+        /// </summary>
         [Parameter(Position = 13, Mandatory = false)] 
         public string PostalPostCode { get; set; }
 
+        /// <summary>
+        /// Postal Country
+        /// </summary>
         [Parameter(Position = 14, Mandatory = false)] 
         public string PostalCountry { get; set; }
 
+        /// <summary>
+        /// Postal Fax #
+        /// </summary>
         [Parameter(Position = 15, Mandatory = false)] 
         public string Fax { get; set; }
 
+        /// <summary>
+        /// Referral Source
+        /// </summary>
         [Parameter(Position = 16, Mandatory = false)] 
         public string ReferralSource { get; set; }
 
