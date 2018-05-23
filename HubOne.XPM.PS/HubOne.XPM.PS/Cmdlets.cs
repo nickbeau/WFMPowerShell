@@ -530,6 +530,9 @@ namespace HubOne.PS
         [ValidateNotNullOrEmpty()]
         public string Region;
 
+        /// <summary>
+        /// The Search Filter
+        /// </summary>
         [Parameter(Position = 0, Mandatory = false)] 
         public string SearchFilter;
 
@@ -539,6 +542,9 @@ namespace HubOne.PS
         [Parameter(Position = 1, Mandatory = false)] 
         public bool IncludeCustomFields;
 
+        /// <summary>
+        /// Process the record
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -617,39 +623,75 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMClient")]
     public class New_WFMClient : PSCmdlet
     {
+        /// <summary>
+        /// Client Name
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string Name;
 
+        /// <summary>
+        /// Client Phone
+        /// </summary>
         [Parameter(Position = 1, Mandatory = false)] 
         public string Phone;
 
+        /// <summary>
+        /// Client Address
+        /// </summary>
         [Parameter(Position = 2, Mandatory = false)] 
         public string Address;
 
+        /// <summary>
+        /// Client City
+        /// </summary>
         [Parameter(Position = 3, Mandatory = false)] 
         public string City;
 
+        /// <summary>
+        /// Client Region or County
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Region;
 
+        /// <summary>
+        /// Client PostalCode
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string PostCode;
 
+        /// <summary>
+        /// Client Country
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public string Country;
 
+        /// <summary>
+        /// Client  Website
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public string Website;
 
+        /// <summary>
+        /// Client Tax Number
+        /// </summary>
         [Parameter(Position = 8, Mandatory = false)] 
         public string TaxNumber;
 
+        /// <summary>
+        /// Client Business Number
+        /// </summary>
         [Parameter(Position = 9, Mandatory = false)] 
         public string BusinessNumber;
 
+        /// <summary>
+        /// Client Postal Address
+        /// </summary>
         [Parameter(Position = 10, Mandatory = false)] 
         public string PostalAddress { get; set; }
 
+        /// <summary>
+        /// Client Postal City
+        /// </summary>
         [Parameter(Position = 11, Mandatory = false)] 
         public string PostalCity { get; set; }
 
