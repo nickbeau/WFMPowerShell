@@ -14,3 +14,6 @@ Here's how to get started
 
 In PowerShell
 ```Import-Module HubOne.XPM.PS.dll```
+
+# Documentation
+Is available [here.](doc/README.md)
