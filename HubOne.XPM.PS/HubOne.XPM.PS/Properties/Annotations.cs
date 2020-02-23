@@ -279,10 +279,18 @@ namespace HubOne.PS.Properties
   [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
   public sealed class ContractAnnotationAttribute : Attribute
   {
+        /// <summary>
+        /// Creates a new attribute
+        /// </summary>
+        /// <param name="fdt"></param>
     public ContractAnnotationAttribute([NotNull] string fdt) : this (fdt, false)
     {
     }
-
+        /// <summary>
+        /// Creates a new Attribute
+        /// </summary>
+        /// <param name="fdt"></param>
+        /// <param name="forceFullStates"></param>
     public ContractAnnotationAttribute([NotNull] string fdt, bool forceFullStates)
     {
       FDT = fdt;

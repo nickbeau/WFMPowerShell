@@ -434,8 +434,15 @@ namespace HubOne.PS
                 }
             }
 
+            /// <summary>
+            /// Occurs when a Property Chanegs
+            /// </summary>
             public event PropertyChangedEventHandler PropertyChanged;
 
+            /// <summary>
+            /// Triggered when a property changes
+            /// </summary>
+            /// <param name="propertyName"></param>
             [NotifyPropertyChangedInvocator]
             protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
             {

@@ -5106,33 +5106,63 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.New, "WFMTimesheetForJob")]
     public class New_WFMTimesheetForJob : PSCmdlet
     {
+        /// <summary>
+        /// The ID of the Job e.g J000001
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string JobId;
 
+        /// <summary>
+        /// The ID of the Task e.g. 412
+        /// </summary>
         [Parameter(Position = 1, Mandatory = true)] 
         public string TaskId;
 
+        /// <summary>
+        /// The Staff ID e.g. 1
+        /// </summary>
         [Parameter(Position = 2, Mandatory = true)] 
         public string StaffId;
 
+        /// <summary>
+        /// The Ddate and time of the time entry in the form 2008-10-29T00:00:00
+        /// </summary>
         [Parameter(Position = 3, Mandatory = true)] 
         public string Date;
 
+        /// <summary>
+        /// Any Note with the time entry
+        /// </summary>
         [Parameter(Position = 4, Mandatory = false)] 
         public string Note;
 
+        /// <summary>
+        /// The time in minutes
+        /// </summary>
         [Parameter(Position = 5, Mandatory = false)] 
         public string TimeInMinutes;
 
+        /// <summary>
+        /// The Start Date and Time
+        /// </summary>
         [Parameter(Position = 6, Mandatory = false)] 
         public DateTime Start;
 
+        /// <summary>
+        /// The End Date and Time
+        /// </summary>
         [Parameter(Position = 7, Mandatory = false)] 
         public DateTime End;
 
+        /// <summary>
+        /// Whether or not the time entry is billable
+        /// </summary>
         [Parameter(Position = 8, Mandatory = false)] 
         public bool Billable;
 
+        /// <summary>
+        /// Processes the Record
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
@@ -5178,9 +5208,15 @@ namespace HubOne.PS
     [Cmdlet(VerbsCommon.Remove, "WFMTimesheet")]
     public class Remove_WFMTimesheet : PSCmdlet
     {
+        /// <summary>
+        /// The Timesheet Entry Id e.g. 123
+        /// </summary>
         [Parameter(Position = 0, Mandatory = true)] 
         public string TimesheetId;
 
+        /// <summary>
+        /// Processes the Record
+        /// </summary>
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
